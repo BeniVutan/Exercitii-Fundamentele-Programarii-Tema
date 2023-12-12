@@ -391,7 +391,7 @@ namespace Exercitii_Fundamentele_Programarii_Tema
                  contor++;
                  n /= i;
                }
-               if (contor > 0)
+               if (conto > 0)
                {
                  Console.Write($"{i}^{contor} ");
                  if (n > 1)
@@ -411,7 +411,7 @@ namespace Exercitii_Fundamentele_Programarii_Tema
 
                bool rezultat = VerificareDinDouaCifre(numar);
 
-               if (rezultat)
+               if (result)
                {
                    Console.WriteLine($"Numărul {numar} este format doar din două cifre care se pot repeta.");
                }
@@ -436,52 +436,6 @@ namespace Exercitii_Fundamentele_Programarii_Tema
                return numarString.All(cifra => cifra == cifra1 || cifra == cifra2);
            }
             */
-
-
-
-            int min = 1;
-            int max = 1024;
-            int guessedNumber;
-
-            Console.WriteLine("Introdu un numar intre 1 si 1024.");
-
-              while (true)
-                                                  
-                // Calculul numarului mediu intre min si max pentru a formula intrebarea
-                guessedNumber = (min + max) / 2;
-
-                // Intrebarea utilizatorului
-                Console.WriteLine($"Numarul este mai mare sau egal cu {guessedNumber}? (Da / Nu / Egal)");
-
-                string answer = Console.ReadLine()?.ToLower();
-
-                if (answer == "da")
-                {
-                    min = guessedNumber + 1;
-                }
-                else if (answer == "nu")
-                {
-                    max = guessedNumber - 1;
-                }
-                else if (answer == "egal")
-                {
-                    Console.WriteLine($"Numarul ghicit este: {guessedNumber}");
-                    
-                }
-                else
-                {
-                    Console.WriteLine("Te rog sa raspunzi cu 'Da', 'Nu' sau 'Egal'.");
-                }
-
-              if (min > max)
-              
-                Console.WriteLine("Ai dat un raspuns incorect sau a fost o greseala. Te rog sa raspunzi corect pentru a continua.");
-               
-
-
-
-
-
 
 
         }     
